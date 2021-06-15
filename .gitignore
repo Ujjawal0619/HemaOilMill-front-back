@@ -2,7 +2,6 @@ node_modules/
 about.MD
 Readme.MD
 
-config/config.env
 
 npm-debug.log*
 
