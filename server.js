@@ -31,7 +31,7 @@ app.use('/api/transactions', require('./routes/transactions'));
 app.use('/api/turnover', require('./routes/turnover'));
 
 // Serve static(react) assets in production
-if (process.env.NODE_ENV === 'porduction') {
+if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
   console.log('inside');
