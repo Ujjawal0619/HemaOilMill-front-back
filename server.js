@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./util/db');
+const path = require('path');
 
 // Load env vars
 dotenv.config({ path: './config/config.env' });
@@ -13,9 +14,9 @@ connectDB();
 // Init Middleware in order to use req.body
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.send('Hello from express');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello from express');
+// });
 
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
@@ -28,6 +29,15 @@ app.use('/api/oil', require('./routes/oil'));
 app.use('/api/cake', require('./routes/cake'));
 app.use('/api/transactions', require('./routes/transactions'));
 app.use('/api/turnover', require('./routes/turnover'));
+
+// Serve static(react) assets in production
+if (process.env.NODE_ENV === 'porduction') {
+  // Set static folder
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  );
+}
 
 const PORT = process.env.PORT || 5000;
 
