@@ -1,3 +1,3 @@
-## Scheam:
+## Schema:
 
-![scheam](./schema.png)
+![scheam](./screenShots/schema.png)
