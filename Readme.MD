@@ -1,6 +1,6 @@
 ## Live
 
-[Link text Here](https://boiling-taiga-85602.herokuapp.com/login)
+[Link to Live Project](https://boiling-taiga-85602.herokuapp.com/login)
 
 ## Schema:
 
