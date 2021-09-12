@@ -26,5 +26,5 @@
     "dotenv": Sensetive data like URI, Secret Key, etc
     "express": Server
     "express-validator": As Middleware
-    "jsonwebtoken":  JWT, Algo - "HS256"
+    "jsonwebtoken":  JWT, Algo - "HS256", 3 sections 1. algo, type 2. payload expiry time 3.256 bit secret key
     "mongoose": Abstraction layer over MongoDB
