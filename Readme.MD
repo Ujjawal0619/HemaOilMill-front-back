@@ -19,3 +19,12 @@
 ### Payment Section:
 
 ![Payment](./screenShots/payment.jpg)
+
+## Dependencies:
+
+    "bcryptjs": Encryption and Decryption of data
+    "dotenv": Sensetive data like URI, Secret Key, etc
+    "express": Server
+    "express-validator": As Middleware
+    "jsonwebtoken":  JWT, Algo - "HS256"
+    "mongoose": Abstraction layer over MongoDB
